@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content= ''/>
+    <meta name="copyright" content="" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div id="rongqi">
+    <!--导航-->
+    <div id="index">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-xs-2"></div>
+            <div class="col-md-2 col-lg-2 col-xs-2">
+                <a href="index.html">主页</a>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xs-2">
+                <a href="hualang.html">画廊</a>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xs-2">
+                <a href="index.html">风景</a>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xs-2">
+                <a href="index.html">插画</a>
+            </div>
+        </div>
+    </div>
+
+    <!--轮播-->
+<div id="container"></div>
+    <!--展示-->
+    <div id="zhanshi">
+        <span class="col-lg-11 col-md-11 col-xs-11">展示</span>
+        <div class="ros">
+            <!--<div class="col-md-1"></div>-->
+            <div class="col-md-3 col-lg-3 col-xs-3 case">
+                <a href="sakura.html">sakura</a>
+                <p>
+                    樱花（学名：Cerasus sp.）：是蔷薇科樱属几种植物的统称，在《中国植物志》新修订的名称中专指“东京樱花”，亦称“日本樱花”。樱花品种相当繁多，数目超过三百种以上，全世界共有野生樱花约150种，中国有50多种。全世界约40种樱花类植物野生种祖先中，原产于中国的有33种。其他的则是通过园艺杂交所衍生得到的品种。
+                </p>
+                <a href="sakura.html"><img title="sakura" src="img/sakura.jpg"></a>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xs-1"></div>
+            <div class="col-md-3 col-lg-3 col-xs-3 case">
+                <a href="rain.html">rain</a>
+                <p>
+                    雨是一种自然降水现象，是由大气循环扰动产生的，是地球水循环不可缺少的一部分，是几乎所有的远离河流的陆生植物补给淡水的惟一方法。从天上掉下雨滴，有大有小，有快有慢。地球表面水蒸发上升遇冷形成了雨。雨是人类生活中最重要的淡水资源,雨是人类生活中最重要的淡水资源。
+                </p>
+                <a href="rain.html"><img title="rain" src="img/rain.jpg"></a>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xs-1"></div>
+            <div class="col-md-3 col-lg-3 col-xs-3 case">
+                <a href="snow.html">snow</a>
+                <p>
+                    雪：从混合云中降落到地面的雪花形态的固体水。由大量白色不透明的冰晶（雪晶）和其聚合物（雪团）组成的降水。雪是水在空中凝结再落下的自然现象，或指落下的雪；雪是水在固态的一种形式。雪只会在很冷的温度及温带气旋的影响下才会出现，因此亚热带地区和热带地区下雪的机会较微小。
+                </p>
+                <a href="snow.html"><img title="snow" src="img/snow.jpg"></a>
+            </div>
+        </div>
+    </div>
+    <!--小画廊-->
+    <div id="hua">
+        <span class="row col-lg-12 col-md-12 col-lg-12">小画廊</span>
+          <div class="row">
+              <a href="#"><img src="img/s1.jpg" class="col-md-2 col-lg-2 col-xs-2"title="樱花"></a>
+              <a href="#"><img src="img/s2.jpg" class="col-md-2 col-lg-2 col-xs-2"title="雪"></a>
+              <a href="#"><img src="img/s3.jpg" class="col-md-2 col-lg-2 col-xs-2"title="樱花"></a>
+              <a href="#"><img src="img/s4.png" class="col-md-2 col-lg-2 col-xs-2"title="死侍"></a>
+              <a href="#"><img src="img/s5.jpg" class="col-md-2 col-lg-2 col-xs-2"title="月光"></a>
+              <a href="#"><img src="img/s6.jpg" class="col-md-2 col-lg-2 col-xs-2"title="森林"></a>
+          </div>
+          <div class="row hua1">
+              <a href="#"><img src="img/s7.jpg" class="col-md-2 col-lg-2 col-xs-2"title="夜城"></a>
+              <a href="#"><img src="img/s8.jpg" class="col-md-2 col-lg-2 col-xs-2"title="孤独"></a>
+              <a href="#"><img src="img/s9.jpg" class="col-md-2 col-lg-2 col-xs-2"title="雨夜"></a>
+              <a href="#"><img src="img/s10.jpg" class="col-md-2 col-lg-2 col-xs-2"title="幻想"></a>
+              <a href="#"><img src="img/s11.jpeg" class="col-md-2 col-lg-2 col-xs-2"title="樱花"></a>
+              <a href="#"><img src="img/s12.jpeg" class="col-md-2 col-lg-2 col-xs-2"title="远方"></a>
+          </div>
+    </div>
+</div>
+<script src='js/delaunay.js'></script>
+<script src='js/TweenMax.js'></script>
+<script>
+
+    const TWO_PI = Math.PI * 2;
+
+    var images = [],
+        imageIndex = 0;
+
+    var image,
+        imageWidth = 1000,
+        imageHeight = 450;
+
+    var vertices = [],
+        indices = [],
+        prevfrag = [],
+        fragments = [];
+
+    var margin = 50;
+
+    var container = document.getElementById('container');
+
+    var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
+
+    window.onload = function() {
+        TweenMax.set(container, {perspective:500});
+
+        // images from http://www.hdwallpapers.in
+        var urls = [
+                'img/01.jpg',
+                'img/06.jpg',
+                'img/3.jpg',
+                'img/04.jpg',
+                'img/07.jpg',
+                'img/05.jpg'
+            ],
+            image,
+            loaded = 0;
+        // very quick and dirty hack to load and display the first image asap
+        images[0] = image = new Image();
+        image.onload = function() {
+            if (++loaded === 1) {
+
+                for (var i = 1; i < 6; i++) {
+                    images[i] = image = new Image();
+
+                    image.src = urls[i];
+                }
+                placeImage();
+            }
+        };
+        image.src = urls[0];
+    };
+
+    function placeImage(transitionIn) {
+        image = images[imageIndex];
+
+        if (++imageIndex === images.length) imageIndex = 0;
+
+        var num = Math.random();
+        if(num < .25) {
+            image.direction = "left";
+        } else if(num < .5) {
+            image.direction = "top";
+        } else if(num < .75) {
+            image.direction = "bottom";
+        } else {
+            image.direction = "right";
+        }
+
+        container.appendChild(image);
+        image.style.opacity = 0;
+
+        if (transitionIn !== false) {
+            triangulateIn();
+        }
+    }
+
+    function triangulateIn(event) {
+        var box = image.getBoundingClientRect(),
+            top = box.top,
+            left = box.left;
+
+        if(image.direction == "left") {
+            clickPosition[0] = 0;
+            clickPosition[1] = imageHeight / 2;
+        } else if(image.direction == "top") {
+            clickPosition[0] = imageWidth / 2;
+            clickPosition[1] = 0;
+        } else if(image.direction == "bottom") {
+            clickPosition[0] = imageWidth / 2;
+            clickPosition[1] = imageHeight;
+        } else if(image.direction == "right") {
+            clickPosition[0] = imageWidth;
+            clickPosition[1] = imageHeight / 2;
+        }
+
+
+        triangulate();
+        build();
+    }
+
+    function triangulate() {
+        for(var i = 0; i < 40; i++) {
+            x = -margin + Math.random() * (imageWidth + margin * 2);
+            y = -margin + Math.random() * (imageHeight + margin * 2);
+            vertices.push([x, y]);
+        }
+        vertices.push([0,0]);
+        vertices.push([imageWidth,0]);
+        vertices.push([imageWidth, imageHeight]);
+        vertices.push([0, imageHeight]);
+
+        vertices.forEach(function(v) {
+            v[0] = clamp(v[0], 0, imageWidth);
+            v[1] = clamp(v[1], 0, imageHeight);
+        });
+
+        indices = Delaunay.triangulate(vertices);
+    }
+
+    function build() {
+        var p0, p1, p2,
+            fragment;
+
+        var tl0 = new TimelineMax({onComplete:buildCompleteHandler});
+
+        for (var i = 0; i < indices.length; i += 3) {
+            p0 = vertices[indices[i + 0]];
+            p1 = vertices[indices[i + 1]];
+            p2 = vertices[indices[i + 2]];
+
+            fragment = new Fragment(p0, p1, p2);
+
+            var dx = fragment.centroid[0] - clickPosition[0],
+                dy = fragment.centroid[1] - clickPosition[1],
+                d = Math.sqrt(dx * dx + dy * dy),
+                rx = 30 * sign(dy),
+                ry = 90 * -sign(dx),
+                delay = d * 0.003 * randomRange(0.9, 1.1);
+            fragment.canvas.style.zIndex = Math.floor(d).toString();
+
+            var tl1 = new TimelineMax();
+
+            if(image.direction == "left") {
+                rx = Math.abs(rx);
+                ry = 0;
+            } else if(image.direction == "top") {
+                rx = 0;
+                ry = Math.abs(ry);
+            } else if(image.direction == "bottom") {
+                rx = 0;
+                ry = - Math.abs(ry);
+            } else if(image.direction == "right") {
+                rx = - Math.abs(rx);
+                ry = 0;
+            }
+
+            tl1.from(fragment.canvas, 1, {
+                z:-50,
+                rotationX:rx,
+                rotationY:ry,
+                scaleX:0,
+                scaleY:0,
+                ease:Cubic.easeIn
+            });
+            tl1.from(fragment.canvas, 0.4,{alpha:0}, 0.6);
+
+            tl0.insert(tl1, delay);
+
+            fragments.push(fragment);
+            container.appendChild(fragment.canvas);
+        }
+    }
+
+    function buildCompleteHandler() {
+        // add pooling?
+        image.style.opacity = 1;
+        image.addEventListener('transitionend', function catchTrans() {
+            fragments.forEach(function(f) {
+                container.removeChild(f.canvas);
+            });
+
+            fragments.length = 0;
+            vertices.length = 0;
+            indices.length = 0;
+
+            placeImage();
+            this.removeEventListener('transitionend',catchTrans,false);
+        }, false);
+
+    }
+
+    //////////////
+    // MATH UTILS
+    //////////////
+
+    function randomRange(min, max) {
+        return min + (max - min) * Math.random();
+    }
+
+    function clamp(x, min, max) {
+        return x < min ? min : (x > max ? max : x);
+    }
+
+    function sign(x) {
+        return x < 0 ? -1 : 1;
+    }
+
+    //////////////
+    // FRAGMENT
+    //////////////
+
+    Fragment = function(v0, v1, v2) {
+        this.v0 = v0;
+        this.v1 = v1;
+        this.v2 = v2;
+
+        this.computeBoundingBox();
+        this.computeCentroid();
+        this.createCanvas();
+        this.clip();
+    };
+    Fragment.prototype = {
+        computeBoundingBox:function() {
+            var xMin = Math.min(this.v0[0], this.v1[0], this.v2[0]),
+                xMax = Math.max(this.v0[0], this.v1[0], this.v2[0]),
+                yMin = Math.min(this.v0[1], this.v1[1], this.v2[1]),
+                yMax = Math.max(this.v0[1], this.v1[1], this.v2[1]);
+
+            this.box = {
+                x:Math.round(xMin),
+                y:Math.round(yMin),
+                w:Math.round(xMax - xMin),
+                h:Math.round(yMax - yMin)
+            };
+
+        },
+        computeCentroid:function() {
+            var x = (this.v0[0] + this.v1[0] + this.v2[0]) / 3,
+                y = (this.v0[1] + this.v1[1] + this.v2[1]) / 3;
+
+            this.centroid = [x, y];
+        },
+        createCanvas:function() {
+            this.canvas = document.createElement('canvas');
+            this.canvas.width = this.box.w;
+            this.canvas.height = this.box.h;
+            this.canvas.style.width = this.box.w + 'px';
+            this.canvas.style.height = this.box.h + 'px';
+            this.canvas.style.left = this.box.x + 'px';
+            this.canvas.style.top = this.box.y + 'px';
+            this.ctx = this.canvas.getContext('2d');
+        },
+        clip:function() {
+            this.ctx.save();
+            this.ctx.translate(-this.box.x, -this.box.y);
+            this.ctx.beginPath();
+            this.ctx.moveTo(this.v0[0], this.v0[1]);
+            this.ctx.lineTo(this.v1[0], this.v1[1]);
+            this.ctx.lineTo(this.v2[0], this.v2[1]);
+            this.ctx.closePath();
+            this.ctx.clip();
+            this.ctx.drawImage(image, 0, 0);
+            this.ctx.restore();
+        }
+    };//@ sourceURL=pen.js
+</script>
+</body>
+</html>
