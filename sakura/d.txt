@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        div.a:hover span{
+           display:block;
+            text-align:center;
+            line-height:200px;
+        }
+        span{
+            color:red;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="a"style="background:url(img/s2.jpg);width:200px;height:200px;">
+        <span>aaaaa</span>
+        <a href="#"class="now"></a>
+    </div>
+</div>
+</body>
+</html>

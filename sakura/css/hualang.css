@@ -1,0 +1,18 @@
+#hual{
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:25px;
+    width:1100px;
+    height:35px;
+    line-height: 35px;
+    text-align:center;
+    color: aliceblue;
+    margin-left:20%;
+}
+#hual a{
+    color: deepskyblue;
+}
+#zhanshi{
+    margin-top:50px;
+}

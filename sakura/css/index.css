@@ -1,0 +1,52 @@
+@charset "utf-8";
+canvas { position: absolute; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; }
+img { position: absolute; -webkit-transition: opacity .3s; transition: opacity .3s; }
+#container { position: relative; width: 1000px; height: 450px; margin:0 auto; }
+#rongqi { position: relative; width: 1100px; height: 20px; margin:10px auto; }
+#zhanshi{
+    margin-left:75px;
+
+}
+#zhanshi .col-md-3{
+    border:1px solid red
+}
+#zhanshi a{
+    font-size:20px;
+}
+#zhanshi .case{
+    width:260px;
+    height:430px;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+#zhanshi>span{
+    margin-top:15px;
+    background-color:pink;
+    font-size:20px;
+    color:#0aa1ed;
+    width:950px;
+}
+#index{
+    font-size:25px;
+    height:35px;
+    line-height: 35px;
+    text-align:center;
+    margin-bottom:10px;
+}
+#index a{
+    color: mediumblue;
+}
+#hua{
+    width:1000px;
+    margin-left:50px;
+}
+#hua .hua1{
+    margin-top:30px;
+}
+#hua .col-md-12{
+    font-size:20px;
+    color: #0aa1ed;
+    background-color: pink;
+    margin-left:0;
+    margin-bottom:10px;
+}
